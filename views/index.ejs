@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home - Angela Ruth Photography</title>
+        <% include defaultCSSandJS.ejs %>
+		<style>
+		.text_overlay {
+			position:absolute;
+			width:100%;
+			bottom:40%;
+			opacity:0;
+			font-size:22px;
+			font-family:"Trebuchet MS", Helvetica, sans-serif;
+		}
+		.imgHolder{
+			display:inline-block;
+			background:#FFF;
+		}
+		.fade {
+			transition: opacity .25s ease-in-out;
+			-moz-transition: opacity .25s ease-in-out;
+			-webkit-transition: opacity .25s ease-in-out;
+		}
+		
+		.img{
+			vertical-align:top;
+			opacity: 1;
+		}
+		
+		.imgHover:hover{
+			opacity:0.3;
+		}
+		.imgHover:hover + .text_overlay{
+			opacity:1.0;
+		}
+		</style>
+    </head>
+    <body>
+		<div class="row text-center">
+			<img style="width:25%;" src="images/Logo_large.png"/>
+		</div>
+        <div class="row text-center" style="margin-bottom:40px">
+			<div class="col-md-2"></div>
+			<div class="col-md-4 imgHolder">
+				<img src='images/wedding_image.jpg' class="img imgHover fade"/>
+				<div class="text_overlay fade">
+					<p>Galleries</p>
+				</div>
+			</div>
+			<div class="col-md-4 imgHolder">
+				<a href="/newsim">
+					<img src='images/mini_session_image.jpg' class="img imgHover fade"/>
+					<div class="text_overlay fade">
+						<p>Packages</p>
+					</div>
+				</a>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+		<div class="row text-center">
+			<div class="col-md-2"></div>
+			<div class="col-md-4 imgHolder">
+				<img src='images/personal_image.jpg' class="img imgHover fade"/>
+				<div class="text_overlay fade">
+					<p>Contact Me</p>
+				</div>
+			</div>
+			<div class="col-md-4 imgHolder">
+				<img src='images/about_me.jpg' class="img imgHover fade"/>
+				<div class="text_overlay fade">
+					<p>About Me</p>
+				</div>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+    </body>
+</html>
